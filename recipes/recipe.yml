@@ -6,8 +6,8 @@ name: template
 description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/silverblue-main
-image-version: 41 # latest is also supported if you want new updates ASAP
+base-image: ghcr.io/wayblueorg/sway
+image-version: latest
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -23,18 +23,27 @@ modules:
     install:
       - micro
       - starship
+      - neovim
+      - tailscale
+      - nerd-fonts
+      - fira-code-fonts
+      - ryzenadj
+      - vulkan-tools
+
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
       - firefox
       - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+      - vim
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
     system:
       # If no repo information is specified, Flathub will be used by default
       install:
-        - org.mozilla.firefox
+        - com.vivaldi.Vivaldi
+        - org.telegram.desktop
         - org.gnome.Loupe
       remove:
         - org.gnome.eog
