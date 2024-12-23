@@ -29,7 +29,7 @@ modules:
     remove:
       - firefox
       - firefox-langpacks
-      - vim
+      #- vim
 
   - type: default-flatpaks
     notify: true
