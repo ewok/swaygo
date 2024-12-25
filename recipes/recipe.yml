@@ -50,7 +50,6 @@ modules:
     system:
       install:
         - com.vivaldi.Vivaldi
-        - org.telegram.desktop
         - org.gnome.Loupe
       remove:
         - org.gnome.eog

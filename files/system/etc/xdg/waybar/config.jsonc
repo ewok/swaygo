@@ -119,7 +119,8 @@
     "interval": 30,
     "exec": "sudo /usr/libexec/rotatetdp.sh 2>/dev/null",
     "return-type": "json",
-    "on-click": "sudo /usr/libexec/rotatetdp.sh rotate",
-    "format-icons": [ "", "", "", "✊"  ]
+    "on-click": "sudo /usr/libexec/rotatetdp.sh rotate; pkill -RTMIN+10 waybar",
+    "format-icons": [ "", "", "", "✊" ],
+    "signal": 10,
   }
 }
