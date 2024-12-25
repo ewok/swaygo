@@ -3,7 +3,7 @@
 # image will be published to ghcr.io/<user>/<name>
 name: swaygo
 # description will be included in the image's metadata
-description: This is my personal OS image.
+description: Sway on Legion Go(wip)
 
 # the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/wayblueorg/sway
@@ -19,22 +19,31 @@ modules:
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
   - type: rpm-ostree
+    repos:
+      - https://copr.fedorainfracloud.org/coprs/hhd-dev/hhd/repo/fedora-%OS_VERSION%/hhd-dev-hhd-fedora-%OS_VERSION%.repo
     install:
-      - tailscale
+      - hhd
+      - hhd-ui
+      - adjustor
+      - git-crypt
       - subversion
-      - neovim
+      - tailscale
+      - wdisplays
+      - ydotool
+      - qt6-qtvirtualkeyboard
+      - acpica-tools
+      - input-remapper
     remove:
       - firefox
       - firefox-langpacks
+      - tuned
+      - tuned-ppd
 
   - type: fonts
     fonts:
       nerd-fonts:
         - FiraCode # don't add spaces or "Nerd Font" suffix.
         - NerdFontsSymbolsOnly
-      google-fonts:
-        - Roboto
-        - Open Sans
 
   - type: default-flatpaks
     notify: true
@@ -46,5 +55,16 @@ modules:
       remove:
         - org.gnome.eog
     user: {}
+
+  - type: containerfile
+    snippets:
+      - COPY --from=ghcr.io/ublue-os/main-kernel:41 /tmp/rpms /tmp/rpms/kernel
+      - RUN find /tmp/rpms
+      - RUN rpm-ostree install /tmp/rpms/kernel/kernel-devel-*.rpm
+
+  - type: script
+    scripts:
+      - xpad.sh
+      - ublue-acpi_call.sh
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
