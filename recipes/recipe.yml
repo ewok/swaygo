@@ -58,8 +58,7 @@ modules:
   - type: containerfile
     snippets:
       - COPY --from=ghcr.io/ublue-os/main-kernel:41 /tmp/rpms /tmp/rpms/kernel
-      - RUN find /tmp/rpms
-      - RUN rpm-ostree install /tmp/rpms/kernel/kernel-devel-*.rpm
+      - RUN find /tmp/rpms && rpm-ostree install /tmp/rpms/kernel/kernel-devel-*.rpm && rm -rf /tmp/rpms/kernel
 
   - type: script
     scripts:
