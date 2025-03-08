@@ -43,7 +43,7 @@ modules:
       - acpica-tools
       - input-remapper
       - qjackctl
-      - jack-audio-connection-kit
+      - qpwgraph
     remove:
       - firefox
       - firefox-langpacks
