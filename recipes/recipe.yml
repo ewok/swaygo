@@ -42,6 +42,14 @@ modules:
       - qt6-qtvirtualkeyboard
       - acpica-tools
       - input-remapper
+      - pipewire-alsa
+      - pipewire-gstreamer
+      - pipewire-jack-audio-connection-kit
+      - pipewire-jack-audio-connection-kit-libs
+      - pipewire-libs
+      - pipewire-pulseaudio
+      - pipewire-utils
+      - pipewire-plugin-libcamera
     remove:
       - firefox
       - firefox-langpacks
@@ -51,7 +59,7 @@ modules:
   - type: fonts
     fonts:
       nerd-fonts:
-        - FiraCode # don't add spaces or "Nerd Font" suffix.
+        - FiraCode
         - NerdFontsSymbolsOnly
 
   - type: default-flatpaks
@@ -63,5 +71,9 @@ modules:
       remove:
         - org.gnome.eog
     user: {}
+
+  - type: containerfile
+    snippets:
+      - sed -i 's@enabled=1@enabled=0@g' /etc/yum.repos.d/rpmfusion-*.repo
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
