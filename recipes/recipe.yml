@@ -42,14 +42,8 @@ modules:
       - qt6-qtvirtualkeyboard
       - acpica-tools
       - input-remapper
-      - pipewire-alsa
-      - pipewire-gstreamer
-      - pipewire-jack-audio-connection-kit
-      - pipewire-jack-audio-connection-kit-libs
-      - pipewire-libs
-      - pipewire-pulseaudio
-      - pipewire-utils
-      - pipewire-plugin-libcamera
+      - qjackctl
+      - jack-audio-connection-kit
     remove:
       - firefox
       - firefox-langpacks
