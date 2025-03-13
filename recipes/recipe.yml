@@ -42,8 +42,6 @@ modules:
       - qt6-qtvirtualkeyboard
       - acpica-tools
       - input-remapper
-      - qjackctl
-      - qpwgraph
     remove:
       - firefox
       - firefox-langpacks
