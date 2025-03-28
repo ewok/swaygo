@@ -61,7 +61,7 @@ modules:
       install:
         - com.vivaldi.Vivaldi
         - org.gnome.Loupe
-        - rg.wezfurlong.wezterm
+        - org.wezfurlong.wezterm
       remove:
         - org.gnome.eog
     user: {}
