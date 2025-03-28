@@ -43,6 +43,7 @@ modules:
       - acpica-tools
       - input-remapper
       - waydroid
+      - ca-certificates
     remove:
       - firefox
       - firefox-langpacks
