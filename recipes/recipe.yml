@@ -42,6 +42,7 @@ modules:
       - qt6-qtvirtualkeyboard
       - acpica-tools
       - input-remapper
+      - waydroid
     remove:
       - firefox
       - firefox-langpacks
@@ -60,6 +61,7 @@ modules:
       install:
         - com.vivaldi.Vivaldi
         - org.gnome.Loupe
+        - rg.wezfurlong.wezterm
       remove:
         - org.gnome.eog
     user: {}
