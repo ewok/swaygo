@@ -20,6 +20,7 @@
     "battery",
     "clock",
     "tray",
+    "custom/vkeyboard"
   ],
   // Modules configuration
   "sway/mode": {
@@ -122,5 +123,9 @@
     "on-click": "sudo /usr/libexec/rotatetdp.sh rotate; pkill -RTMIN+10 waybar",
     "format-icons": [ "", "", "", "✊" ],
     "signal": 10,
+  },
+  "custom/vkeyboard": {
+    "format": "",
+    "on-click": "busctl call --user sm.puri.OSK0 /sm/puri/OSK0 sm.puri.OSK0 SetVisible b true"
   }
 }
