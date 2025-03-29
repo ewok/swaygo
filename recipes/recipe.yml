@@ -39,7 +39,6 @@ modules:
       - tailscale
       - wdisplays
       - ydotool
-      - qt6-qtvirtualkeyboard
       - acpica-tools
       - input-remapper
       - waydroid
