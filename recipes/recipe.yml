@@ -22,11 +22,6 @@ modules:
       # - xpad.sh
       # - ublue-acpi_call.sh
 
-  - type: files
-    files:
-      - source: system
-        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
-
   - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/hhd-dev/hhd/repo/fedora-%OS_VERSION%/hhd-dev-hhd-fedora-%OS_VERSION%.repo
@@ -74,5 +69,10 @@ modules:
     system:
       enabled:
         - input-remapper.service
+
+  - type: files
+    files:
+      - source: system
+        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
