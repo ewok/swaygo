@@ -16,8 +16,8 @@
   ],
   "modules-right": [
     "privacy",
-    "custom/vkeyboard",
     "gamemode",
+    "custom/vkeyboard",
     "idle_inhibitor",
     "custom/tdp",
     "tray",
