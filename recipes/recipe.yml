@@ -25,6 +25,7 @@ modules:
   - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/hhd-dev/hhd/repo/fedora-%OS_VERSION%/hhd-dev-hhd-fedora-%OS_VERSION%.repo
+      - https://dl.winehq.org/wine-builds/fedora/41/winehq.repo
     install:
       - hhd
       - hhd-ui
@@ -42,7 +43,7 @@ modules:
       - pam-u2f
       - pamu2fcfg
       - yubikey-manager
-      - wine
+      - winehq-stable
     remove:
       - firefox
       - firefox-langpacks
