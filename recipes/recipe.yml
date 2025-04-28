@@ -26,7 +26,6 @@ modules:
   - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/hhd-dev/hhd/repo/fedora-%OS_VERSION%/hhd-dev-hhd-fedora-%OS_VERSION%.repo
-      - https://copr.fedorainfracloud.org/coprs/patrickl/yabridge/repo/fedora-41/patrickl-yabridge-fedora-41.repo
     install:
       - hhd
       - hhd-ui
@@ -44,8 +43,6 @@ modules:
       - pam-u2f
       - pamu2fcfg
       - yubikey-manager
-      - yabridge
-      - yabridgectl
     remove:
       - firefox
       - firefox-langpacks
