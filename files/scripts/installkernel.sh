@@ -31,3 +31,4 @@ else
     cd /
 fi
 
+mkdir -p /nix
