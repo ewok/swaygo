@@ -46,8 +46,8 @@ modules:
     remove:
       - firefox
       - firefox-langpacks
-      # - tuned
-      # - tuned-ppd
+      - tuned
+      - tuned-ppd
 
   - type: fonts
     fonts:
