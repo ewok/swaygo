@@ -48,6 +48,7 @@ modules:
       - firefox-langpacks
       - tuned
       - tuned-ppd
+      - tuned-switcher
 
   - type: fonts
     fonts:
