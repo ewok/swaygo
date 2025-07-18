@@ -1,9 +1,15 @@
 name: bluebuild
 on:
-  schedule:
-    - cron:
-        "00 06 * * *" # build at 06:00 UTC every day
-        # (20 minutes after last ublue images start building)
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Run'
+        required: true
+        default: 'true'  
+  #schedule:
+    #- cron:
+    #    "00 06 * * *" # build at 06:00 UTC every day
+    #    # (20 minutes after last ublue images start building)
   push:
     paths-ignore: # don't rebuild if only documentation has changed
       - "**.md"
