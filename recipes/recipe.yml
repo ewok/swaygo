@@ -57,15 +57,20 @@ modules:
         - NerdFontsSymbolsOnly
 
   - type: default-flatpaks
-    notify: true
-    system:
-      install:
-        - com.vivaldi.Vivaldi
-        - org.gnome.Loupe
-        - org.wezfurlong.wezterm
-      remove:
-        - org.gnome.eog
-    user: {}
+    configurations:
+      - scope: user
+        repo:
+          title: Flathub (user)
+      - notify: true
+        scope: system
+        repo:
+          title: Flathub (system)
+        remove:
+          - org.gnome.eog
+        install:
+          - com.vivaldi.Vivaldi
+          - org.gnome.Loupe
+          - org.wezfurlong.wezterm
 
   - type: systemd
     system:
