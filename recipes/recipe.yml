@@ -17,7 +17,6 @@ modules:
     snippets:
       - COPY --from=ghcr.io/ublue-os/akmods:bazzite-42 /kernel-rpms /tmp/rpms/kernel
       - COPY --from=ghcr.io/ublue-os/akmods:bazzite-42 /rpms /tmp/rpms/rpms
-      - COPY --from=ghcr.io/ublue-os/akmods-extra:bazzite-42 /rpms /tmp/rpms/rpms-extra
   - type: script
     scripts:
       - installkernel.sh

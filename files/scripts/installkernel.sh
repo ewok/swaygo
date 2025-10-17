@@ -25,13 +25,8 @@ if [[ "$INCOMING_KERNEL_VERSION" != "$QUALIFIED_KERNEL" ]]; then
         /tmp/rpms/kernel/kernel-tools-[0-9]*.rpm \
         /tmp/rpms/kernel/kernel-tools-libs-[0-9]*.rpm \
         /tmp/rpms/kernel/kernel-devel-*.rpm \
-        /tmp/rpms/rpms/kmods/*kvmfr*.rpm \
-        /tmp/rpms/rpms/kmods/*xone*.rpm \
-        /tmp/rpms/rpms/kmods/*openrazer*.rpm \
         /tmp/rpms/rpms/kmods/*v4l2loopback*.rpm \
         /tmp/rpms/rpms/kmods/*wl*.rpm \
-        /tmp/rpms/rpms/kmods/*framework-laptop*.rpm \
-        /tmp/rpms/rpms-extra/kmods/*ryzen-smu*.rpm
 else
     echo "Installing kernel files from kernel-cache."
     cd /tmp
