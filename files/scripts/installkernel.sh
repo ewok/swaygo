@@ -31,15 +31,15 @@ if [[ "$INCOMING_KERNEL_VERSION" != "$QUALIFIED_KERNEL" ]]; then
         /tmp/rpms/rpms/kmods/*v4l2loopback*.rpm \
         /tmp/rpms/rpms/kmods/*wl*.rpm \
         /tmp/rpms/rpms/kmods/*framework-laptop*.rpm \
-        /tmp/rpms/rpms-extra/s/kmods/*nct6687*.rpm \
-        /tmp/rpms/rpms-extra/s/kmods/*gcadapter_oc*.rpm \
-        /tmp/rpms/rpms-extra/s/kmods/*zenergy*.rpm \
-        /tmp/rpms/rpms-extra/s/kmods/*vhba*.rpm \
-        /tmp/rpms/rpms-extra/s/kmods/*gpd-fan*.rpm \
-        /tmp/rpms/rpms-extra/s/kmods/*ayaneo-platform*.rpm \
-        /tmp/rpms/rpms-extra/s/kmods/*ayn-platform*.rpm \
-        /tmp/rpms/rpms-extra/s/kmods/*bmi260*.rpm \
-        /tmp/rpms/rpms-extra/s/kmods/*ryzen-smu*.rpm
+        /tmp/rpms/rpms-extra/kmods/*nct6687*.rpm \
+        /tmp/rpms/rpms-extra/kmods/*gcadapter_oc*.rpm \
+        /tmp/rpms/rpms-extra/kmods/*zenergy*.rpm \
+        /tmp/rpms/rpms-extra/kmods/*vhba*.rpm \
+        /tmp/rpms/rpms-extra/kmods/*gpd-fan*.rpm \
+        /tmp/rpms/rpms-extra/kmods/*ayaneo-platform*.rpm \
+        /tmp/rpms/rpms-extra/kmods/*ayn-platform*.rpm \
+        /tmp/rpms/rpms-extra/kmods/*bmi260*.rpm \
+        /tmp/rpms/rpms-extra/kmods/*ryzen-smu*.rpm
 else
     echo "Installing kernel files from kernel-cache."
     cd /tmp
