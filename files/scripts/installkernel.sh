@@ -31,14 +31,6 @@ if [[ "$INCOMING_KERNEL_VERSION" != "$QUALIFIED_KERNEL" ]]; then
         /tmp/rpms/rpms/kmods/*v4l2loopback*.rpm \
         /tmp/rpms/rpms/kmods/*wl*.rpm \
         /tmp/rpms/rpms/kmods/*framework-laptop*.rpm \
-        /tmp/rpms/rpms-extra/kmods/*nct6687*.rpm \
-        /tmp/rpms/rpms-extra/kmods/*gcadapter_oc*.rpm \
-        /tmp/rpms/rpms-extra/kmods/*zenergy*.rpm \
-        /tmp/rpms/rpms-extra/kmods/*vhba*.rpm \
-        /tmp/rpms/rpms-extra/kmods/*gpd-fan*.rpm \
-        /tmp/rpms/rpms-extra/kmods/*ayaneo-platform*.rpm \
-        /tmp/rpms/rpms-extra/kmods/*ayn-platform*.rpm \
-        /tmp/rpms/rpms-extra/kmods/*bmi260*.rpm \
         /tmp/rpms/rpms-extra/kmods/*ryzen-smu*.rpm
 else
     echo "Installing kernel files from kernel-cache."
