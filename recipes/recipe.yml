@@ -21,6 +21,7 @@ modules:
     scripts:
       - installkernel.sh
       - allow-nix.sh
+      - patch-mt7xxx.sh
       # - xpad.sh
       # - ublue-acpi_call.sh
 
