@@ -33,7 +33,6 @@ modules:
       - wezterm
       - hhd
       - hhd-ui
-      - adjustor
       - git-crypt
       - subversion
       - tailscale
