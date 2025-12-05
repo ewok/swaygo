@@ -28,9 +28,11 @@ modules:
   - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/hhd-dev/hhd/repo/fedora-%OS_VERSION%/hhd-dev-hhd-fedora-%OS_VERSION%.repo
-      - https://copr.fedorainfracloud.org/coprs/wezfurlong/wezterm-nightly/repo/fedora-%OS_VERSION%/wezfurlong-wezterm-nightly-fedora-%OS_VERSION%.repo
+      # - https://copr.fedorainfracloud.org/coprs/wezfurlong/wezterm-nightly/repo/fedora-%OS_VERSION%/wezfurlong-wezterm-nightly-fedora-%OS_VERSION%.repo
+      - https://copr.fedorainfracloud.org/coprs/scottames/ghostty/repo/fedora-%OS_VERSION%/scottames-ghostty-fedora-%OS_VERSION%.repo
     install:
-      - wezterm
+      # - wezterm
+      - ghostty
       - hhd
       - hhd-ui
       - git-crypt
@@ -58,6 +60,9 @@ modules:
       nerd-fonts:
         - FiraCode
         - NerdFontsSymbolsOnly
+      url-fonts:
+        - name: MapleMono
+          url: https://github.com/subframe7536/maple-font/releases/download/v7.9/MapleMono-NF.zip
 
   - type: default-flatpaks
     configurations:
