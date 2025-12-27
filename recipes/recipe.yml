@@ -48,6 +48,7 @@ modules:
       - pam-u2f
       - pamu2fcfg
       - yubikey-manager
+      - podman-compose
     remove:
       - firefox
       - firefox-langpacks
