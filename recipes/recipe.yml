@@ -15,8 +15,7 @@ modules:
 
   - type: containerfile
     snippets:
-      - COPY --from=ghcr.io/bazzite-org/kernel-bazzite:latest-f43-x86_64 /kernel-rpms /tmp/rpms/kernel
-      - COPY --from=ghcr.io/bazzite-org/kernel-bazzite:latest-f43-x86_64 /rpms /tmp/rpms/rpms
+      - COPY --from=ghcr.io/bazzite-org/kernel-bazzite:latest-f43-x86_64 / /tmp/rpms/kernel
   - type: script
     scripts:
       - installkernel.sh
@@ -28,7 +27,6 @@ modules:
   - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/hhd-dev/hhd/repo/fedora-%OS_VERSION%/hhd-dev-hhd-fedora-%OS_VERSION%.repo
-      # - https://copr.fedorainfracloud.org/coprs/wezfurlong/wezterm-nightly/repo/fedora-%OS_VERSION%/wezfurlong-wezterm-nightly-fedora-%OS_VERSION%.repo
       - https://copr.fedorainfracloud.org/coprs/scottames/ghostty/repo/fedora-%OS_VERSION%/scottames-ghostty-fedora-%OS_VERSION%.repo
     install:
       - ghostty

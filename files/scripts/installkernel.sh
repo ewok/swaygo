@@ -19,12 +19,11 @@ if [[ "$INCOMING_KERNEL_VERSION" != "$QUALIFIED_KERNEL" ]]; then
         --install=zstd \
         /tmp/rpms/kernel/kernel-[0-9]*.rpm \
         /tmp/rpms/kernel/kernel-core-*.rpm \
+        /tmp/rpms/kernel/kernel-common-*.rpm \
         /tmp/rpms/kernel/kernel-modules-*.rpm \
         /tmp/rpms/kernel/kernel-tools-[0-9]*.rpm \
         /tmp/rpms/kernel/kernel-tools-libs-[0-9]*.rpm \
-        /tmp/rpms/kernel/kernel-devel-*.rpm \
-        /tmp/rpms/rpms/kmods/*v4l2loopback*.rpm \
-        /tmp/rpms/rpms/kmods/*wl*.rpm
+        /tmp/rpms/kernel/kernel-devel-*.rpm
 else
     echo "Installing kernel files from kernel-cache."
     cd /tmp
